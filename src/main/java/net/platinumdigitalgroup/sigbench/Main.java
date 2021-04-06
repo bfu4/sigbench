@@ -7,21 +7,27 @@ import javafx.scene.Scene;
 import javafx.stage.Modality;
 import javafx.stage.Stage;
 
+import java.net.URL;
+import java.util.Objects;
+
 public class Main extends Application {
 
     static Stage primaryStage;
 
+    public static void main(String[] args) {
+        Application.launch(Main.class, args);
+    }
+
     @Override
-    public void start(Stage primaryStage) throws Exception{
+    public void start(Stage primaryStage) throws Exception {
         Main.primaryStage = primaryStage;
-        Parent root = FXMLLoader.load(getClass().getClassLoader().getResource("main.fxml"));
+        URL res = getClass().getClassLoader().getResource("main.fxml");
+        Parent root = FXMLLoader.load(Objects.requireNonNull(res));
+
+        // Set stuff
         primaryStage.setTitle("sigbench");
         primaryStage.setScene(new Scene(root));
         primaryStage.show();
-    }
-
-    public static void main(String[] args) {
-        launch(args);
     }
 
     public static void submitBenchmark(Benchmark toBench) {
@@ -34,7 +40,9 @@ public class Main extends Application {
             stage.initModality(Modality.APPLICATION_MODAL);
             loader.<ResultsController>getController().setResults(toBench.benchmark());
             stage.showAndWait();
-        } catch (Exception e) {}
+        } catch (Exception ignored) {
+            // idk he wants this to be ignored
+        }
     }
 
 }

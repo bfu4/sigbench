@@ -4,8 +4,7 @@ module sigbench {
 	requires javafx.controls;
 	requires javafx.graphics;
 	requires javafx.media;
-
-	opens net.platinumdigitalgroup.sigbench to javafx.fxml;
+	requires javafx.base;
 
 	exports net.platinumdigitalgroup.sigbench;
 }
