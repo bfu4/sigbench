@@ -3,7 +3,6 @@ package net.platinumdigitalgroup.sigbench;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.event.ActionEvent;
-import javafx.event.Event;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
@@ -13,10 +12,7 @@ import javafx.scene.input.Dragboard;
 import javafx.scene.input.TransferMode;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.layout.HBox;
-import javafx.stage.Stage;
 
-import javax.naming.ldap.Control;
-import javax.swing.border.Border;
 import java.io.File;
 import java.net.URL;
 import java.util.ResourceBundle;
