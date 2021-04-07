@@ -109,7 +109,6 @@
         </plugins>
     </build>
     <dependencies>
-        <!-- EAT MY DEPRECATION, BITCH -->
         <dependency>
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
