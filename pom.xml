@@ -6,7 +6,7 @@
 
     <groupId>net.platinumdigitalgroup</groupId>
     <artifactId>sigbench</artifactId>
-    <version>1.0-SNAPSHOT</version>
+    <version>1.0</version>
 
     <properties>
         <javafx.version>11</javafx.version>
@@ -48,7 +48,7 @@
                     <archive>
                         <manifest>
                             <addClasspath>true</addClasspath>
-                            <mainClass>net.platinumdigitalgroup.sigbench.Main</mainClass>
+                            <mainClass>net.platinumdigitalgroup.sigbench.Runner</mainClass>
                         </manifest>
                     </archive>
                 </configuration>
@@ -68,7 +68,7 @@
                 <artifactId>javafx-maven-plugin</artifactId>
                 <version>0.0.3</version>
                 <configuration>
-                    <mainClass>net.platinumdigitalgroup.sigbench.Main</mainClass>
+                    <mainClass>net.platinumdigitalgroup.sigbench.Runner</mainClass>
                 </configuration>
             </plugin>
             <plugin>
@@ -98,7 +98,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>net.platinumdigitalgroup.sigbench.Main</mainClass>
+                            <mainClass>net.platinumdigitalgroup.sigbench.Runner</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
@@ -114,7 +114,6 @@
             <groupId>org.openjfx</groupId>
             <artifactId>javafx-base</artifactId>
             <version>11</version>
-            <scope>compile</scope>
         </dependency>
         <dependency>
             <groupId>org.openjfx</groupId>
