@@ -1,19 +1,11 @@
 package net.platinumdigitalgroup.sigbench;
 
-import javafx.collections.FXCollections;
 import javafx.fxml.Initializable;
-import javafx.geometry.Insets;
 import javafx.scene.control.Label;
 import javafx.scene.control.ListView;
-import javafx.scene.control.TableView;
-import javafx.scene.layout.Background;
-import javafx.scene.layout.BackgroundFill;
-import javafx.scene.layout.CornerRadii;
-import javafx.scene.paint.Color;
 import javafx.scene.text.Font;
 
 import java.net.URL;
-import java.util.Arrays;
 import java.util.ResourceBundle;
 
 /**
@@ -21,7 +13,7 @@ import java.util.ResourceBundle;
  */
 public class ResultsController implements Initializable {
     public Label pctLabel;
-    public ListView resultList;
+    public ListView<Label> resultList;
 
     public void initialize(URL location, ResourceBundle resources) {
 
